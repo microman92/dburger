@@ -1,0 +1,12 @@
+@media print {
+
+    .nav,
+    .wrapper,
+    .allcards {
+        display: none;
+    }
+
+    .print {
+        display: flex;
+    }
+} 

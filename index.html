@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/logo.svg">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/media.css">
+    <title>dBurger</title>
+</head>
+
+<body>
+
+
+
+    <nav class="nav">
+        <div class="nav__item container">
+            <a href="#!" class="logo"><img src="./img/logo.svg" alt="Logo">dBurger</a>
+            <div class="nav__left">
+                <button class="basket"><img src="./img/basket.svg" alt="basket"> <span class="basket__span">1</span></button>
+                <!-- Содержимое корзины -->
+                <div class="basket__inner">
+                    <img src="./img/triangle.png" alt="" class="triangle">
+                    <!-- Верхняя часть -->
+                    <div class="basket__inner_up">
+                        <p class="basket__inner_text">Корзина</p>
+                        <button class="close"></button>
+                    </div>
+                    <!-- Лист заказов -->
+                    <div class="basket__list">
+                        <div class="basket__list_item">
+                            <div class="basket__list_left">
+                                <img src="./img/crazy.png" alt="crazy">
+                                <div class="basket__list_desc">
+                                    <h4 class="basket__list_desc-title">Crazy</h4>
+                                    <p class="basket__list_desc-text">31 000 сум</p>
+                                </div>
+                            </div>
+                            <div class="basket__btns">
+                                <button class="basket__btn minus" data-symbol="-">-</button>
+                                <output class="basket__count">1</output>
+                                <button class="basket__btn plus" data-symbol="+">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Нижняя часть корзины -->
+                    <div class="basket__down">
+                        <a href="#!"><p class="basket__down_text">Заказать</p></a>
+                        <span class="basket__down_price">32 000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="wrapper">
+        <img src="./img/header-bg.png" alt="">
+    </div>
+
+    <div class="allcards container">
+        <div class="card" id="crazy">
+            <img class="card__img" src="./img/crazy.png" alt="">
+            <span class="card__span ">1</span>
+            <h3 class="card__title">Crazy</h3>
+            <div class="card__item">
+                <p class="card__item_txt">31 000 сум</p>
+                <button class="card__item_btn"><img src="./img/card-basket.png" alt=""></button>
+            </div>
+        </div>
+        <div class="card" id="light">
+            <img class="card__img" src="./img/light.png" alt="">
+            <span class="card__span ">1</span>
+            <h3 class="card__title">light</h3>
+            <div class="card__item">
+                <p class="card__item_txt">26 000 сум</p>
+                <button class="card__item_btn"><img src="./img/card-basket.png" alt=""></button>
+            </div>
+        </div>
+        <div class="card" id="cheeseburger">
+            <img class="card__img" src="./img/crazy.png" alt="">
+            <span class="card__span ">1</span>
+            <h3 class="card__title">CheeseBurger</h3>
+            <div class="card__item">
+                <p class="card__item_txt">29 000 сум</p>
+                <button class="card__item_btn"><img src="./img/card-basket.png" alt=""></button>
+            </div>
+        </div>
+        <div class="card" id="dburger">
+            <img class="card__img" src="./img/dBurger.png" alt="">
+            <span class="card__span ">1</span>
+            <h3 class="card__title">dBurger</h3>
+            <div class="card__item">
+                <p class="card__item_txt">24 000 сум</p>
+                <button class="card__item_btn"><img src="./img/card-basket.png" alt=""></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Чек для распечатки -->
+    <div class="print">
+        <div class="print__header">
+            <img src="./img/logo.svg" alt="">
+            dBurger
+        </div>
+        <div class="print__body"></div>
+        <div class="print__footer"></div>
+    </div>
+
+
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

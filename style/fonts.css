@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'OSB';
+    src        : url('../fonts/OpenSans-Bold.ttf');
+    font-style : normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'OSR';
+    src        : url('../fonts/OpenSans-Regular.ttf');
+    font-style : normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src        : url('../fonts/SairaStencilOne-Regular.ttf');
+    font-style : normal;
+    font-weight: 400;
+}

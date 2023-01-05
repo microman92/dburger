@@ -1,0 +1,433 @@
+@import 'fonts.css';
+
+* {
+    margin         : 0;
+    padding        : 0;
+    box-sizing     : border-box;
+    text-decoration: none;
+}
+
+button {
+    border : none;
+    outline: none;
+    cursor : pointer;
+}
+
+.container {
+    max-width: 1300px;
+    margin   : 0 auto;
+    width    : 100%;
+}
+
+.nav {
+    display        : flex;
+    justify-content: space-between;
+    background     : #3E284F;
+    box-shadow     : 0px 0px 20px rgba(62, 40, 79, 0.5);
+    padding        : 21px 0;
+}
+
+.nav__item {
+    display        : flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display    : flex;
+    gap        : 10px;
+    align-items: center;
+    font-family: 'Saira';
+    font-style : normal;
+    font-weight: 400;
+    font-size  : 18px;
+    line-height: 28px;
+    color      : #FFFFFF;
+}
+
+/* Кнопка корзины */
+
+.basket {
+    position  : relative;
+    background: transparent;
+}
+
+
+.basket span {
+    padding      : 3px 4px;
+    background   : #FFFFFF;
+    border       : 1px solid #3E284F;
+    font-family  : 'OSR';
+    font-style   : normal;
+    font-weight  : 400;
+    font-size    : 12px;
+    line-height  : 10px;
+    color        : #3E284F;
+    position     : absolute;
+    top          : -5px;
+    right        : -4px;
+    border-radius: 50%;
+    transform    : scale(0);
+    transition   : 0.3s;
+}
+
+.basket span.active {
+    transform: scale(1);
+}
+
+.nav__left {
+    position: relative;
+}
+
+
+.basket__inner {
+    transition: 300ms;
+    position  : absolute;
+    right     : -5px;
+    top       : 34px;
+    visibility: hidden;
+    opacity   : 0;
+    transform : scale(0.9) translateY(50px);
+}
+
+/* .nav__left button:hover~.active {
+    transform : scale(1) rotate(360deg);
+    transition: 0.4s;
+    position  : absolute;
+    right     : 0;
+} */
+
+.basket__inner.active {
+    transform : scale(1) translateY(0px);
+    position  : absolute;
+    right     : 0;
+    visibility: visible;
+    opacity   : 1;
+}
+
+.triangle {
+    position: absolute;
+    right   : 11px;
+    top     : -7px;
+}
+
+.basket__inner_up {
+    padding        : 13px 0px 13px 14px;
+    background     : #775194;
+    box-shadow     : 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display        : flex;
+    justify-content: space-between;
+    border-radius  : 10px 10px 0 0;
+    width          : 357px;
+}
+
+.basket__inner_text {
+    font-family: 'OSB';
+    font-style : normal;
+    font-weight: 700;
+    font-size  : 16px;
+    line-height: 22px;
+    color      : #FFFFFF;
+}
+
+.close {
+    display   : flex;
+    transition: 0.3s;
+    position  : relative;
+    padding   : 15px;
+    background: transparent;
+}
+
+.close::after {
+    content   : '';
+    display   : block;
+    width     : 20px;
+    height    : 2px;
+    transform : rotate(47deg);
+    background: #FFFFFF;
+    position  : absolute;
+    top       : 50%;
+    right     : 6px;
+}
+
+.close::before {
+    content   : '';
+    display   : block;
+    width     : 20px;
+    height    : 2px;
+    transform : rotate(130deg);
+    background: #FFFFFF;
+    position  : absolute;
+    top       : 50%;
+    right     : 6px;
+}
+
+
+.basket__list {
+    padding       : 16px;
+    background    : #FFFFFF;
+    display       : flex;
+    flex-direction: column;
+    gap           : 30px;
+}
+
+.basket__list_item {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+}
+
+.basket__btns {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+}
+
+.minus,
+.plus {
+    transition: 0.3s;
+}
+
+.minus:hover {
+    background: red;
+}
+
+.plus:hover {
+    background: #00A441;
+}
+
+.basket__btns output {
+    background: #EEEEEE;
+    border    : 0.5px solid #BBBBBB;
+    text-align: center;
+    padding   : 2px 8px;
+}
+
+.basket__list img {
+    width : 70px;
+    height: 54px;
+}
+
+.basket__list_desc {
+    display        : flex;
+    justify-content: center;
+    flex-direction : column;
+    margin-left    : 10px;
+}
+
+.basket__list_left {
+    display: flex;
+}
+
+.basket__btns button {
+    padding    : 1px 8px;
+    background : #BBBBBB;
+    font-family: 'OSB';
+    font-style : normal;
+    font-weight: 700;
+    font-size  : 16px;
+    line-height: 22px;
+    color      : #000000;
+}
+
+.basket__list_desc-title {
+    font-family: 'Saira';
+    font-style : normal;
+    font-weight: 400;
+    font-size  : 16px;
+    line-height: 25px;
+    color      : #404040;
+}
+
+.basket__list_desc-text {
+    font-family: 'Open Sans';
+    font-style : normal;
+    font-weight: 400;
+    font-size  : 16px;
+    line-height: 22px;
+    color      : #000000;
+}
+
+
+
+.basket__down {
+    display        : flex;
+    justify-content: space-between;
+    background     : #00A441;
+    box-shadow     : 0px -4px 10px rgba(0, 0, 0, 0.1);
+    border-radius  : 0 0 10px 10px;
+    padding        : 14px;
+    cursor         : pointer;
+}
+
+.basket__down_text {
+    font-family: 'Open Sans';
+    font-style : normal;
+    font-weight: 700;
+    font-size  : 16px;
+    line-height: 22px;
+    color      : #FFFFFF;
+}
+
+.basket__down_price {
+    font-family: 'Open Sans';
+    font-style : normal;
+    font-weight: 700;
+    font-size  : 16px;
+    line-height: 22px;
+    color      : #FFFFFF;
+}
+
+
+.wrapper {
+    text-align: center;
+    margin    : 20px 0;
+}
+
+.allcards {
+    margin-top     : 74px;
+    display        : flex;
+    justify-content: space-between;
+}
+
+.card {
+    background     : #F4F4F4;
+    box-shadow     : 0px 20px 20px -15px rgba(0, 0, 0, 0.25);
+    border-radius  : 10px;
+    position       : relative;
+    max-width      : 306px;
+    width          : 100%;
+    padding        : 16px;
+    height         : 194px;
+    display        : flex;
+    align-items    : center;
+    justify-content: flex-end;
+    flex-direction : column;
+}
+
+.card__img {
+    position : absolute;
+    top      : -54px;
+    transform: translate(-50%);
+    left     : 50%;
+}
+
+.card__span {
+    font-family  : 'Open Sans';
+    font-style   : normal;
+    font-weight  : 400;
+    font-size    : 12px;
+    line-height  : 16px;
+    color        : #FFFFFF;
+    padding      : 7px 12px;
+    background   : #3E284F;
+    border       : 2px solid #FFFFFF;
+    border-radius: 50%;
+    position     : absolute;
+    top          : -15px;
+    right        : -15px;
+    transform    : scale(0);
+    transition   : 0.3s;
+}
+
+.card__span.active {
+
+    transform: scale(1);
+}
+
+.card__item {
+    display        : flex;
+    justify-content: space-between;
+    width          : 100%;
+    margin-top     : 20px;
+}
+
+.card__item_txt {
+    padding      : 10px;
+    background   : #3E284F;
+    border-radius: 10px;
+    font-family  : 'Open Sans';
+    font-style   : normal;
+    font-weight  : 700;
+    font-size    : 16px;
+    line-height  : 22px;
+    color        : #FFFFFF;
+    cursor       : pointer;
+}
+
+.card__item_btn {
+    padding      : 11px;
+    background   : #3E284F;
+    border-radius: 10px;
+    cursor       : pointer;
+    transition   : 0.3s;
+}
+
+.card__item_btn:hover {
+    background: #00A441;
+}
+
+.card__title {
+    font-family: 'Saira';
+    font-style : normal;
+    font-weight: 400;
+    font-size  : 18px;
+    line-height: 28px;
+    color      : #404040;
+
+}
+
+
+/* print */
+
+.print {
+    width         : 200px;
+    display       : none;
+    flex-direction: column;
+    margin        : 50px auto;
+    font-family   : 'Saira';
+    font-style    : normal;
+    font-weight   : 400;
+    font-size     : 18px;
+    line-height   : 28px;
+    text-align    : center;
+}
+
+.print__header {
+    display        : flex;
+    align-items    : center;
+    gap            : 15px;
+    justify-content: center;
+
+}
+
+.print__body {
+    display        : flex;
+    justify-content: center;
+    flex-wrap      : wrap;
+    gap            : 10px;
+    margin         : 20px 0;
+}
+
+.print__body_item {
+    display           : flex;
+    justify-content   : center;
+    flex-direction    : column;
+    align-items       : center;
+    text-align        : center;
+    /* width          : 100%; */
+}
+
+.print__body_name {
+    display       : flex;
+    flex-direction: column;
+    gap           : 5px;
+}
+
+.print__header img {
+    filter: invert();
+}
+
+
+
+
+/* print */
